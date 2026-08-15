@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx newman run postman/collections/Dummyapicollection.json -e postman/Environments/dummyapiEnvironmentQA.json"
+    "test": "npx newman run postman/collections/Dummyapicollection.json -e postman/Environments/dummyapiEnvironmentQA.json -r cli,htmlextra --reporter-htmlextra-export reports/newman-report.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "newman": "^6.2.2"
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1"
   }
 }

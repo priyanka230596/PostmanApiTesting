@@ -32,3 +32,10 @@ jobs:
 
       - name: Run Postman API tests
         run: npm run test
+
+      - name: Upload Newman HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4 
+        with:
+          name: postman-report
+          path: reports/newman-report.html
